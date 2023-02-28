@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: rgb(18, 18, 18);
+    background: #121212;
     cursor: none;
 }
 
@@ -24,44 +24,47 @@ body {
     top: 0;
     pointer-events: none;
     z-index: 100;
-    &--large {
-        --size: 40px;
-        border: 1px solid rgb(255, 60, 60);
-    }
-    &--small {
-        --size: 8px;
-        background: rgb(255, 60, 60);
-        transform: translate(-50%, -50%);
-    }
+}
+
+.cursor--large {
+    --size: 40px;
+    border: 1px solid #ff3c3c;
+}
+
+.cursor--small {
+    --size: 8px;
+    background: #ff3c3c;
+    transform: translate(-50%, -50%);
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    button {
-        --size: 60px;
-        border: none;
-        min-width: var(--size);
-        min-height: var(--size);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.2rem;
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
-        transition: background 200ms ease, color 200ms ease;
-        cursor: none;
-    }
-    &:hover {
-        button {
-            background: rgba(255, 255, 255, 0.04);
-            color: rgba(255, 255, 255, 0.04);
-            &:hover {
-                color: #fff;
-            }
-        }
-    }
+}
+
+main button {
+    --size: 60px;
+    border: none;
+    min-width: var(--size);
+    min-height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    transition: background 200ms ease, color 200ms ease;
+    cursor: none;
+}
+
+main:hover button {
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.04);
+}
+
+main:hover button:hover {
+    color: #fff;
 }
 
 .support {
@@ -70,14 +73,16 @@ main {
     bottom: 10px;
     padding: 10px;
     display: flex;
-    a {
-        margin: 0 10px;
-        color: #fff;
-        font-size: 1.8rem;
-        backface-visibility: hidden;
-        transition: all 150ms ease;
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
+}
+
+.support a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.8rem;
+    backface-visibility: hidden;
+    transition: all 150ms ease;
+}
+
+.support a:hover {
+    transform: scale(1.1);
 }

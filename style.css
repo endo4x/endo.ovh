@@ -13,6 +13,7 @@ body {
     overflow: hidden;
     background: #121212;
     cursor: none;
+    font-family: 'Source Code Pro', monospace
 }
 
 .cursor {

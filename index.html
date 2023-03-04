@@ -1,5 +1,17 @@
 <head>
-  <title>endo.ovh // cheat provider</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNQYFQMS4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BNQYFQMS4E');
+    </script>
+    <title>endo.ovh</title>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -12,21 +24,80 @@
     }
 </style>
 <style>
-h2 {text-align: center;}
+    h2 {
+        text-align: center;
+    }
 </style>
-<body>
-<h2 class="white-text" color=white; style="vertical-align: top;">endo.ovh</h2>
-</body>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+    .absolute-container {
+        position: absolute;
+        top: 75;
+    }
 </style>
-  <main>
+
+<html lang="en">
+
+<script>
+    function sendMessage() {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1081561146491945010/GwMZjiSp9jP9-D-vrHKTGJboM51PCAIpQzH0gs1daBk7XgE3NTGnX9M7rChXXG3rWGk2");
+
+        request.setRequestHeader('Content-type', 'application/json');
+
+        const params = {
+            username: "endo.ovh",
+            avatar_url: "",
+            content: "a user just visited endo.ovh."
+        }
+
+        request.send(JSON.stringify(params));
+    }
+</script>
+
+<style>
+    .absolute-container2 {
+        position: absolute;
+        top: 60;
+    }
+</style>
+
+<div class="absolute-container">
+    <h2 style="color: white;">endo.ovh</h2>
+</div>
+
+<body>
+    <p style="color: white;" class="absolute-container2" id="current-time"></p>
+
+    <script>
+        function getCurrentTime() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            return timeString;
+        }
+
+        // Update the text of the h1 element with the current time every second
+        setInterval(function() {
+            var currentTimeString = getCurrentTime();
+            var currentTimeElement = document.getElementById('current-time');
+            currentTimeElement.textContent = currentTimeString;
+        }, 1000); // Run this code every second (1000 milliseconds)
+    </script>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+</style>
+<main>
 
     <a href="https://endoovh.mysellix.io/"><button title="buy endo.ovh">
         <ion-icon name="logo-bitcoin"></ion-icon>
         </button></a>
     <a href="https://github.com/LuaConsole"><button title="github">
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-github" title="github"></ion-icon>
       </button></a>
     <a href="https://endoovh.mysellix.io/product/63fe1033a068f"><button title="buy with stripe">
           <ion-icon name="card"></ion-icon>

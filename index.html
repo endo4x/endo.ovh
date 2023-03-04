@@ -36,25 +36,6 @@
     }
 </style>
 
-<html lang="en">
-
-<script>
-    function sendMessage() {
-        const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1081561146491945010/GwMZjiSp9jP9-D-vrHKTGJboM51PCAIpQzH0gs1daBk7XgE3NTGnX9M7rChXXG3rWGk2");
-
-        request.setRequestHeader('Content-type', 'application/json');
-
-        const params = {
-            username: "endo.ovh",
-            avatar_url: "",
-            content: "a user just visited endo.ovh."
-        }
-
-        request.send(JSON.stringify(params));
-    }
-</script>
-
 <style>
     .absolute-container2 {
         position: absolute;
